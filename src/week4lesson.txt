@@ -1,0 +1,27 @@
+Types in JavaScript:
+Number
+String
+Object [array]
+Function
+NaN
+Undefined
+Null
+
+Conditional Logic:
+&&
+||
+==
+===
+If ()
+Else()
+Else if ()
+Ternary ? true : false
+
+Array iteration methods:
+Filter, map, reduce, etc
+Create your own filter with for loop
+
+Instantiating variables:
+let/const
+var
+hoisting
