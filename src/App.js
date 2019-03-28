@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import axios from "axios"
 
 class App extends Component {
   constructor(props) {
     super(props)
-    this.state = {message: "Hello World."}
+    this.state = {}
   }
   componentDidMount() {
     axios.get('https://reqres.in/api/users?page=2')
       .then(response => {
-        const myData = response.data.data
-        this.setState({data: myData})
+        const { data: { data } } = response
+        this.setState({data: data})
       })
       .catch(err => {
         this.setState({data: ["error retrieving names"]})
@@ -31,7 +30,6 @@ class App extends Component {
         <div key={index}>{obj.first_name}</div>
       )}
       </div>
-
     )
   }
 }
