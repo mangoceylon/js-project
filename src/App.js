@@ -26,8 +26,8 @@ class App extends Component {
 
   render() {
     return(
-      <div>{this.state.data && this.state.data.map( (obj, index) =>
-        <div key={index}>{obj.first_name}</div>
+      <div>{this.state.data && this.state.data.map( (person, index) =>
+        <div key={index}>{person.first_name}</div>
       )}
       </div>
     )
