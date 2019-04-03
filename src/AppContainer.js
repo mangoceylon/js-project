@@ -17,13 +17,15 @@ class AppContainer extends Component {
     const newState = currentState.filter( (item, index) => {
       if (index !== idx) {
         return item
+      } else {
+        return false
       }
     })
     this.setState({data: newState})
   }
 
   fetchData = () => {
-    axios.get('https://reqres.in/api/users?page=2')
+    axios('https://reqres.in/api/users?page=2')
       .then(response => {
         const { data: { data } } = response
         this.setState({ data: data })

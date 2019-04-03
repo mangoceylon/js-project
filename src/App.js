@@ -1,6 +1,4 @@
 import React from 'react';
-import './App.css';
-import axios from "axios"
 import Card from "react-bootstrap/Card"
 
 const App = (props) => {
@@ -22,7 +20,7 @@ const App = (props) => {
             <Card style={{ width: '18rem' }}>
               <div style={{ marginLeft: "80%", marginTop: 5, fontSize: 30}} onClick={ e => handleClick(index)}>X</div>
               <Card.Body>
-                <img src={person.avatar}/>
+                <img alt={"avatar"}src={person.avatar}/>
                 <Card.Title>{person.first_name} {person.last_name}</Card.Title>
               </Card.Body>
             </Card>
