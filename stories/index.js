@@ -4,6 +4,13 @@ import { Button } from '@storybook/react/demo';
 import Card from "react-bootstrap/Card"
 import 'bootstrap/dist/css/bootstrap.css';
 import RecipeReviewCard from "../src/mDC"
+import CustomTheme from "../src/victoryExample"
+import MyVictoryLine from "../src/victoryLine"
+
+// ReactDOM.render(
+//   <Button label="Hello World!" />,
+//   document.getElementById('app')
+// );
 
 storiesOf('Button', module)
   .add('with text', () => (
@@ -32,4 +39,14 @@ storiesOf('Card', module)
 storiesOf('RecipeReviewCard', module)
   .add('default', () => (
     <RecipeReviewCard />
+  ))
+
+storiesOf('CustomTheme', module)
+  .add('default', () => (
+    <CustomTheme />
+  ))
+
+storiesOf('MyVictoryLine', module)
+  .add('default', () => (
+    <MyVictoryLine />
   ))
