@@ -1,5 +1,7 @@
 import React from 'react';
 import Card from "react-bootstrap/Card"
+import BarChart from './reactd3training/BarChart'
+import RenderBall from "./d3ball/renderBall"
 
 const App = (props) => {
 
@@ -10,9 +12,16 @@ const App = (props) => {
   const handlePress = (e) => {
     props.getData()
   }
+
+  const ballStyle = {
+    padding: 200
+  }
+
+
     return(
-      <div>
-      <button onClick={ e => handlePress(e)}>RESET</button>
+      <div style={ballStyle}>
+      <RenderBall />
+      {/* <button onClick={ e => handlePress(e)}>RESET</button>
         {props.data && props.data.map( (person, index) => {
         return (
           // <div>{person.first_name}</div>
@@ -28,6 +37,13 @@ const App = (props) => {
         )
       }
       )}
+      <div>
+        <BarChart
+          width={700}
+          height={500}
+          id={"root"}
+        />
+      </div> */}
       </div>
     )
 }
